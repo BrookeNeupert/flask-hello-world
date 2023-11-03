@@ -45,6 +45,26 @@ def insert_db():
     conn.close()
     return "Values Successfully added to Database"
 
-#@app.route('/db_select')
+@app.route('/db_select')
+def select():
+    conn = psycopg2.connect("postgres://lab10_db_il0a_user:93JffJXJ94OrzLPAK7v5CvAp1GsGS7Si@dpg-cl2iaubmgg9c73aul1l0-a/lab10_db_il0a")
+    cur = conn.cursor()
+    cur.execute('''
+        SELECT * FROM Basketball;
+    ''')
+    records = cur.fetchall()
+    conn.close()
+    response_str = ""
+    response_str+="<table>"
+    for player in records:
+        response_str+="<tr>"
+        for info in player:
+            response_str+="<td>{}</td>"
+        response_str+="<tr>"
+    response_str+="<table>"
+    return response_str
+
+#@app.route('/db_drop')
+    
 
     
