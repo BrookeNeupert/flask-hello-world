@@ -41,7 +41,7 @@ def insert_db():
     ('Nikola', 'Jokic', 'Denver', 'Nuggets', 15),
     ('Kawhi', 'Leonard', 'Los Angeles', 'Clippers', 2);
     ''')
-    cur.commit()
+    conn.commit()
     conn.close()
     return "Values Successfully added to Database"
 
