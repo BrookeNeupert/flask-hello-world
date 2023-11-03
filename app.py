@@ -18,12 +18,12 @@ def create_db():
     cur = conn.cursor()
     cur.execute('''
         CREATE TABLE IF NOT EXISTS Basketball(
-            First varchar(255),
-            Last varchar(255),
-            City varchar(255),
-            Name varchar(255),
-            Number int
-            );
+        First varchar(255),
+        Last varchar(255),
+        City varchar(255),
+        Name varchar(255),
+        Number int
+        );
     ''')
     conn.commit()
     conn.close()
