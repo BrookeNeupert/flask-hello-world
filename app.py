@@ -60,8 +60,8 @@ def select():
         response_str+="<tr>"
         for info in player:
             response_str+="<td>{}</td>"
-        response_str+="<tr>"
-    response_str+="<table>"
+        response_str+="</tr>"
+    response_str+="</table>"
     return response_str
 
 #@app.route('/db_drop')
